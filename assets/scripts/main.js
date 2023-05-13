@@ -66,7 +66,7 @@ function saveRecipesToStorage(recipes) {
  * <button>.
  */
 function initFormHandler() {
-
+  const main = document.querySelector("main"); // get reference to main
   // B2. TODO - Get a reference to the <form> element
   const form = document.querySelector("form");
   // B3. TODO - Add an event listener for the 'submit' event, which fires when the
@@ -87,7 +87,6 @@ function initFormHandler() {
     // B7. TODO - Add the recipeObject data to <recipe-card> using element.data
     recipeCard.data = recipeObj;
     // B8. TODO - Append this new <recipe-card> to <main>
-    const main = document.querySelector("main");
     main.appendChild(recipeCard);
     // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
     //            then save the recipes array back to localStorage
